@@ -1,0 +1,120 @@
+:root {
+  --border-color: #47476B;
+  --background-color: #000;
+  --border-thickness: 2px;
+  --width: 360px;
+  --ac-color: #AC3939;
+  --sign-color:  #666666;
+  --number-color: #4D4D4D;
+  --text-color: white;
+  --equal-color: #004466;
+  --expression-color: #FFA500;
+  --big-size: 2em;
+  --small-size: 1.2em
+}
+
+.container{
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction:   column;
+  justify-content: center;
+  min-width: var(--width);
+  max-width: var(--width);
+  border: solid var(--border-thickness) var(--border-color);
+  padding: 5px;
+  user-select: none;
+  font-family: calculator-font;
+}
+
+.output{
+  text-align: right;  
+  color: var(--text-color);
+}
+
+.output > p{
+  white-space: pre-wrap; /* 允许文本换行 */
+  word-wrap: break-word; /* 允许在长单词中断行 */
+  font-size: var(--big-size);
+}
+
+.expression{
+  color: var(--expression-color);
+  min-height: 1em;
+}
+
+.input{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5px;
+  grid-auto-rows: 60px;
+}
+
+.btn{
+  display: grid;
+  place-content: center;
+  color: var(--text-color);
+  font-size: var(--big-size);
+}
+
+.btn:hover{
+  border: solid gray 1px;
+  color: black;
+}
+
+span.text{
+  display: block;
+  border: solid red 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.text{
+  color: var(--text-color);
+  font-size: 2em;
+}
+
+.row1{
+  grid-row: 1;
+}
+
+.row2{
+  grid-row: 2;
+}
+
+.row3{
+  grid-row: 3;
+}
+
+.row4{
+  grid-row: 4;
+}
+
+.row5{
+  grid-row: 5;
+}
+
+.btnAc{
+  background-color: var(--ac-color);
+  grid-column: 1/3;
+  grid-row: 1;
+}
+
+.btnEqual{
+  background-color: var(--equal-color);
+  grid-row: 4/6;
+}
+
+.btnZero{
+  grid-column: 1/3;
+}
+
+.btnNumber{
+  background-color: var(--number-color);
+}
+
+.btnSign{
+  background-color: var(--sign-color);
+}
+
